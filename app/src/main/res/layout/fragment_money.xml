@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/money_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qianft.m.qian.fragment.MoneyFragment">
+
+    <com.qianft.m.qian.view.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:title="债权宝"
+        custom:titleTextSize="10sp"
+        custom:titleTextColor="@color/black_light">
+    </com.qianft.m.qian.view.TopBar>
+
+    <ListView
+        android:id="@+id/money_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#affff0"
+        android:dividerHeight="5dp">
+    </ListView>
+</LinearLayout>

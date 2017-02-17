@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.qianft.m.qian.activity.MainActivity">
 
-    <RelativeLayout
+    <!--<RelativeLayout
+        android:id="@+id/topbar_home"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white">
@@ -18,15 +20,112 @@
             android:paddingBottom="5dp"
             android:src="@mipmap/logo"/>
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_home"
         android:orientation="vertical">
         <com.qianft.m.qian.view.MyWebView
+            android:id="@+id/mywebview_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
         </com.qianft.m.qian.view.MyWebView>
+    </LinearLayout>-->
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHome"
+                android:layout_width="50dp"
+                android:layout_height="42dp"
+                android:src="@mipmap/footer_home"
+                android:background="#00000000"/>
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivMoney"
+                android:layout_width="50dp"
+                android:layout_height="42dp"
+                android:src="@mipmap/footer_money"
+                android:background="#00000000"/>
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="理财"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivAccount"
+                android:layout_width="50dp"
+                android:layout_height="42dp"
+                android:src="@mipmap/footer_account"
+                android:background="#00000000"/>
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="50dp"
+                android:layout_height="42dp"
+                android:src="@mipmap/footer_more"
+                android:background="#00000000"/>
+            <TextView
+                android:id="@+id/tvMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多"/>
+        </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

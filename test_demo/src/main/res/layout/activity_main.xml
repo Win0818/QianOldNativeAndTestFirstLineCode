@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.qianft.m.test_demo.MainActivity">
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.qianft.m.test_demo.FirstFragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"></fragment>
+
+    <FrameLayout
+        android:id="@+id/right_fragment"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

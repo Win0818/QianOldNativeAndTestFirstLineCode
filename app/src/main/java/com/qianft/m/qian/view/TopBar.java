@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -49,10 +50,11 @@ public class TopBar extends RelativeLayout{
 
     public TopBar(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setBackgroundColor(0xFFFF0000);
+        setBackgroundColor(0xFFFFFFFF);
         TypedArray ta  = context.obtainStyledAttributes(attrs, R.styleable.TopBar);
         mLeftTextColor = ta.getColor(R.styleable.TopBar_leftTextColor, 0);
         mLeftBackground = ta.getDrawable(R.styleable.TopBar_leftBackground);
+
         mLeftText = ta.getString(R.styleable.TopBar_leftText);
 
         mRightTextColor = ta.getColor(R.styleable.TopBar_rightTextColor, 0);
@@ -78,6 +80,7 @@ public class TopBar extends RelativeLayout{
         //为创建的组件元素赋值
         mLeftButton.setTextColor(mLeftTextColor);
         mLeftButton.setBackground(mLeftBackground);
+        //mLeftButton.setLayoutParams(LayoutParams.WRAP_CONTENT);
         mLeftButton.setText(mLeftText);
 
         mRightButton.setBackground(mRightBackground);

@@ -130,11 +130,13 @@ public class MyWebView extends RelativeLayout {
 			startProgressDialog();
 			LogUtil.d("Wing", "Progress onLoading");
 		}
+
 		@Override
 		public void onLoaded() {
 			stopProgressDialog();
 			LogUtil.d("Wing", "Progress onLoaded thread  " + Thread.currentThread().getName());
 		}
+
 		@Override
 		public void onError() {
 			if (mNoNetworkLinearLayout != null) {

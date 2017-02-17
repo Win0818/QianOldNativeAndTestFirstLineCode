@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_account_creditor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qianft.m.qian.activity.AccountCreditorActivity">
+
+    <com.qianft.m.qian.view.TopBar
+        android:id="@+id/account_creditor_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:title="债权宝"
+        custom:titleTextSize="10sp"
+        custom:leftBackground="@mipmap/back_ico"
+        custom:titleTextColor="@color/black_light">
+    </com.qianft.m.qian.view.TopBar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/account_creditor_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/account_creditor_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

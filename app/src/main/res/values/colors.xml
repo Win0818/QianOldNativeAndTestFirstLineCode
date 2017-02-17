@@ -162,10 +162,15 @@
     <color name="darkblue">#00008B</color><!--暗蓝色 -->
     <color name="navy">#000080</color><!--海军色 -->
     <color name="black">#000000</color><!--黑色 -->
+    <color name="black_light">#000023</color><!--黑色 -->
     <color name="gesture_line_true">#2184c7</color>
     <color name="gesture_line_false">#eb2222</color>
     <!-- <color name="gesture_background">#ff303237</color>
     <drawable name="trans">@color/black</drawable> -->
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="blue_qianft">#0093dd</color>
     <drawable name="trans">@color/blue</drawable>
 
 </resources>

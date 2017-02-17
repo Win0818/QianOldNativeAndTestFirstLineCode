@@ -1,6 +1,7 @@
 package com.qianft.m.qian.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.net.ConnectivityManager;
@@ -171,6 +172,14 @@ public class Util {
 	        return true;  
 	    }  
 	    return false;  
-	}  
-	
+	}
+
+	public static void startActivity(Context context, Class<?> cls) {
+		try {
+			Intent intent = new Intent(context, cls);
+			context.startActivity(intent);
+		} catch (Exception e) {
+			LogUtil.d("Wing", "Activity Not Found!");
+		}
+	}
 }
