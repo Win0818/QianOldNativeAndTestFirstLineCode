@@ -1,6 +1,7 @@
 package com.qianft.m.test_demo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * Created by Administrator on 2017/2/13.
@@ -34,6 +36,21 @@ public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.second_fragment, container, false);
+        Button OpenNetworkTestActivity = (Button) view.findViewById(R.id.OpenNetworkTestActivity);
+        OpenNetworkTestActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), NetworkTestActivity.class));
+            }
+        });
+        Button OpenServiceTestActivity = (Button) view.findViewById(R.id.OpenServiceTestActivity);
+        OpenServiceTestActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ServiceTestActivity.class));
+            }
+        });
+
         Log.d(TAG, "onCreateView");
         return view;
     }

@@ -2,7 +2,6 @@ package com.qianft.m.test_demo;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Notification;
 import android.content.ContentUris;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -37,7 +36,6 @@ public class NotificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         picture = (ImageView) findViewById(R.id.picture);
-
     }
 
     public void openCamera(View view) {
