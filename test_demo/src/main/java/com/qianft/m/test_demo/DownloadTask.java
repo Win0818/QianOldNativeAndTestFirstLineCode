@@ -2,6 +2,7 @@ package com.qianft.m.test_demo;
 
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.util.Log;
 
 import com.qianft.m.test_demo.callback.DownloadListener;
 
@@ -29,6 +30,9 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
     private boolean isPaused = false;
     private int lastProgress;
 
+    public DownloadTask(DownloadListener listener) {
+        this.listener = listener;
+    }
     @Override
     protected void onPreExecute() {
         //progressDialog.show();
@@ -45,7 +49,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
             String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
             String directory = Environment.getExternalStoragePublicDirectory
                     (Environment.DIRECTORY_DOWNLOADS).getPath();
-            file = new File(directory + fileName);
+            file = new File(directory + fileName + ".apk");
             if (file.exists()) {
                 downloadLength = file.length();
             }
@@ -67,7 +71,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                 savedFile = new RandomAccessFile(file, "rw");
                 savedFile.seek(downloadLength);  //跳过已下载的字节
                 byte[] b = new byte[1024];
-                int total = 0;
+                long total = 0;
                 int len;
                 while ((len = is.read(b)) != -1) {
                     if (isCanceled) {
@@ -81,10 +85,10 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                         int progress = (int) ((total + downloadLength) * 100 /
                                                         contentLength);
                         publishProgress(progress);
-                        response.body().close();
-                        return TYPE_SUCCESS;
                     }
                 }
+                response.body().close();
+                return TYPE_SUCCESS;
             }
         }catch (Exception e) {
             e.printStackTrace();
@@ -135,7 +139,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
         }
     }
 
-    public void pausedDownload(){
+    public void pauseDownload(){
         isPaused = true;
     }
 
@@ -149,7 +153,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                 .url(downloadUrl)
                 .build();
         Response response = client.newCall(request).execute();
-        if (request != null && response.isSuccessful()) {
+        if (response != null && response.isSuccessful()) {
             long contentLength = response.body().contentLength();
             response.close();
             return contentLength;
@@ -157,3 +161,4 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
         return 0;
     }
 }
+

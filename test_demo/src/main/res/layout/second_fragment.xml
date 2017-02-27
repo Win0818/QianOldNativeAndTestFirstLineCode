@@ -23,4 +23,11 @@
         android:layout_marginTop="15dp"
         android:text="OpenServiceTestActivity" />
 
+    <Button
+        android:id="@+id/OpenDownlodActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="OpenDownloadActivity" />
+
 </LinearLayout>

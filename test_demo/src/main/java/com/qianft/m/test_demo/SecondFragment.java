@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.qianft.m.test_demo.activity.DownloadActivity;
+
 /**
  * Created by Administrator on 2017/2/13.
  */
@@ -48,6 +50,14 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), ServiceTestActivity.class));
+            }
+        });
+
+        Button OpenDownlodActivity = (Button) view.findViewById(R.id.OpenDownlodActivity);
+        OpenDownlodActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DownloadActivity.class));
             }
         });
 
