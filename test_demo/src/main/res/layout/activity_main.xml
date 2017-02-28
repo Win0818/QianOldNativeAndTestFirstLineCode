@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.qianft.m.test_demo.MainActivity">
+    tools:context="com.qianft.m.test_demo.activity.MainActivity">
 
     <fragment
         android:id="@+id/first_fragment"
-        android:name="com.qianft.m.test_demo.FirstFragment"
+        android:name="com.qianft.m.test_demo.fragment.FirstFragment"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"></fragment>

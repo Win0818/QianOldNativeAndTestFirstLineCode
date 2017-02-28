@@ -10,6 +10,8 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.qianft.m.test_demo.activity.MainActivity;
+
 public class MyService extends Service {
 
     private DownloadBinder mBinder = new DownloadBinder();
@@ -18,7 +20,7 @@ public class MyService extends Service {
 
     }
 
-    class DownloadBinder extends Binder {
+    public class DownloadBinder extends Binder {
         public void startDownload() {
             Log.d("MyService", "startDownload executed");
         }

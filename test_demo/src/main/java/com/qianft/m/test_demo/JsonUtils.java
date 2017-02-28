@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.qianft.m.test_demo.bean.App;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

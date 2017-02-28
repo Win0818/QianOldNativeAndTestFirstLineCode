@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,7 +48,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".NotificationActivity" />
+        <activity android:name=".activity.NotificationActivity" />
         <!--
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -60,23 +60,31 @@
                 android:resource="@xml/file_paths"/>
         </provider>
         -->
-        <activity android:name=".NetworkTestActivity" />
+        <activity android:name=".activity.NetworkTestActivity" />
 
         <service
             android:name=".MyService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ServiceTestActivity" />
+        <activity android:name=".activity.ServiceTestActivity" />
 
         <service
             android:name=".MyIntentService"
             android:exported="false" />
-        <service android:name=".service.DownloadService"
+        <service
+            android:name=".service.DownloadService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
-        <activity android:name=".activity.DownloadActivity"></activity>
+        <activity android:name=".activity.DownloadActivity" />
+        <activity
+            android:name=".activity.MaterialTestActivity"
+            android:label="Fruits" />
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -29,5 +29,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="OpenDownloadActivity" />
+    <Button
+        android:id="@+id/OpenMaterialActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="OpenMaterialActivity" />
+
+    <Button
+        android:id="@+id/OpenNavigationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="OpenNavigationActivity" />
 
 </LinearLayout>
