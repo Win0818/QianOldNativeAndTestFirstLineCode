@@ -1,4 +1,4 @@
-package com.qianft.m.test_demo;
+package com.qianft.m.test_demo.service;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -10,6 +10,7 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.qianft.m.test_demo.R;
 import com.qianft.m.test_demo.activity.MainActivity;
 
 public class MyService extends Service {

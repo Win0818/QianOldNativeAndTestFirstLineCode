@@ -3,6 +3,6 @@
     <version value="1"></version>
     <dbname value="BookStore2"></dbname>
     <list>
-        <mapping class="com.qianft.m.test_demo.Book2"></mapping>
+        <mapping class="com.qianft.m.test_demo.bean.Book2"></mapping>
     </list>
 </litepal>

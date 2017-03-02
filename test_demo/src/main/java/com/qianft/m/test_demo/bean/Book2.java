@@ -1,4 +1,4 @@
-package com.qianft.m.test_demo;
+package com.qianft.m.test_demo.bean;
 
 import org.litepal.crud.DataSupport;
 

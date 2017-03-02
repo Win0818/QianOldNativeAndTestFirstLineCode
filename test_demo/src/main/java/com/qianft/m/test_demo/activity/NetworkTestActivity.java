@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.qianft.m.test_demo.HttpCallbackListener;
-import com.qianft.m.test_demo.HttpUtils;
-import com.qianft.m.test_demo.JsonUtils;
+import com.qianft.m.test_demo.utils.HttpUtils;
+import com.qianft.m.test_demo.utils.JsonUtils;
 import com.qianft.m.test_demo.R;
 
 import java.io.BufferedReader;

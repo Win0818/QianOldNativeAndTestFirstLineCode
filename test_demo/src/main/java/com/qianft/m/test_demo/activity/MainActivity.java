@@ -26,7 +26,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.qianft.m.test_demo.Book2;
+import com.qianft.m.test_demo.bean.Book2;
 import com.qianft.m.test_demo.MyDatabaseHelper;
 import com.qianft.m.test_demo.R;
 import com.qianft.m.test_demo.fragment.SecondFragment;

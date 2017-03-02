@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.qianft.m.test_demo.MyService;
+import com.qianft.m.test_demo.service.MyService;
 import com.qianft.m.test_demo.R;
 
 public class ServiceTestActivity extends AppCompatActivity {

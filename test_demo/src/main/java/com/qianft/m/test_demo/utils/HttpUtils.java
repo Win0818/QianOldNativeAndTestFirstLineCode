@@ -1,6 +1,9 @@
-package com.qianft.m.test_demo;
+package com.qianft.m.test_demo.utils;
 
 import android.util.Log;
+
+import com.qianft.m.test_demo.ContentHandler;
+import com.qianft.m.test_demo.HttpCallbackListener;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -110,7 +113,7 @@ public class HttpUtils {
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             XMLReader xmlReader =  factory.newSAXParser().getXMLReader();
-            ContentHandler  handler = new ContentHandler();
+            ContentHandler handler = new ContentHandler();
             xmlReader.setContentHandler(handler);
             //开始解析
             xmlReader.parse(new InputSource(new StringReader(xmlData)));

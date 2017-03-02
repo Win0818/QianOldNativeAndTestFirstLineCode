@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.qianft.m.test_demo.fileprovider"
@@ -63,14 +62,14 @@
         <activity android:name=".activity.NetworkTestActivity" />
 
         <service
-            android:name=".MyService"
+            android:name=".service.MyService"
             android:enabled="true"
             android:exported="true" />
 
         <activity android:name=".activity.ServiceTestActivity" />
 
         <service
-            android:name=".MyIntentService"
+            android:name=".service.MyIntentService"
             android:exported="false" />
         <service
             android:name=".service.DownloadService"
@@ -84,7 +83,11 @@
         <activity
             android:name=".activity.NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.FruitActivity"
+            android:theme="@style/FruitActivityTheme">
+
+        </activity>
     </application>
 
 </manifest>

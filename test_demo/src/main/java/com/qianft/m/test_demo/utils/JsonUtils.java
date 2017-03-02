@@ -1,4 +1,4 @@
-package com.qianft.m.test_demo;
+package com.qianft.m.test_demo.utils;
 
 import android.util.Log;
 
