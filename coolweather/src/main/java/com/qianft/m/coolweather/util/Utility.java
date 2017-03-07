@@ -3,9 +3,11 @@ package com.qianft.m.coolweather.util;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.qianft.m.coolweather.db.City;
 import com.qianft.m.coolweather.db.County;
 import com.qianft.m.coolweather.db.Province;
+import com.qianft.m.coolweather.gson.Weather;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -68,8 +70,9 @@ public class Utility {
                 for (int i = 0; i < allCounty.length(); i++) {
                     JSONObject countyObject = allCounty.getJSONObject(i);
                     County county = new County();
+                    Log.d("wing", "WeatherId: " + countyObject.toString());
                     county.setCountyName(countyObject.getString("name"));
-                    county.setWeathreId(countyObject.getInt("id"));
+                    county.setWeathreId(countyObject.getString("weather_id"));
                     county.setCityId(cityId);
                     Log.d("Wing", "county:  " + countyObject.toString());
                     county.save();
@@ -81,5 +84,17 @@ public class Utility {
 
         }
         return false;
+    }
+
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
