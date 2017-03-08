@@ -10,14 +10,32 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+    }
+    signingConfigs {
+        config {
+            storeFile file('c:/Users/Administrator/Documents/wuyong.jks')
+            storePassword '123456'
+            keyAlias 'wuyongdev'
+            keyPassword '123456'
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+
+    productFlavors {
+        qihoo {
+
+        }
+        baidu {
+
         }
     }
 }
